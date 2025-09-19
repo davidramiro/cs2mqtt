@@ -21,8 +21,9 @@
     "MQTT__Host": "homeassistant.local",
     "MQTT__Port": "1883",
     "MQTT__UseTLS": false,
-    "MQTT__Username": "c2m",
+    "MQTT__Username": "foo",
     "MQTT__Password": "password",
+    "MQTT__Some_New_Value": "testing",
     "MQTT__ClientId": "cs2mqtt",
     "MQTT__ProtocolVersion": "5.0.0"
   },
