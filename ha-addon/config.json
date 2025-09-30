@@ -22,8 +22,7 @@
   "ports_description": {
     "8080/tcp": "Game State API port"
   },
-  "options": {
-  },
+  "options": {},
   "schema": {
     "MQTT__Host": "str?",
     "MQTT__Port": "int?",

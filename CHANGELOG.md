@@ -1,5 +1,74 @@
 # Changelog
 
+## [1.9.0](https://github.com/davidramiro/cs2mqtt/compare/v1.8.1...v1.9.0) (2025-09-30)
+
+
+### New features
+
+* add option to ignore data from spectated players. it is now enabled by default and must be disabled to revert to previous behavior. ([8573417](https://github.com/davidramiro/cs2mqtt/commit/8573417e87cb714b7c93e93bbcd0cf40146eca2f))
+* **api:** add healthcheck endpoints /health and /alive ([ad9c6cd](https://github.com/davidramiro/cs2mqtt/commit/ad9c6cd1b4317d78344278ca38840607c7b4e590))
+* **homeassistant:** add cs2 game device connectivity sensor ([8c3b03c](https://github.com/davidramiro/cs2mqtt/commit/8c3b03ce3c6683340838747ec4ea8bfc4c31c13a))
+* **homeassistant:** add unit of measurement to various sensors ([f520b83](https://github.com/davidramiro/cs2mqtt/commit/f520b8319fe9f099a4f1292b1512894046ba6cb5))
+* **homeassistant:** append textual steamid (steam_x:y:z) to the mqtt device name ([9193d1a](https://github.com/davidramiro/cs2mqtt/commit/9193d1aa51a04dee3bf5ee67d5263e893de7ced6))
+* **homeassistant:** convert flashed sensor to boolean value ([2ba6cb0](https://github.com/davidramiro/cs2mqtt/commit/2ba6cb0210fa06c8e90c9936a7427d7b9238fd76))
+* **homeassistant:** convert smoked and burning sensor measurements to percentage ([305a0fd](https://github.com/davidramiro/cs2mqtt/commit/305a0fd1dfd9523c74f0b4e895521f9c5040c67d))
+* **homeassistant:** enable installing cs2mqtt as an add-on via repository ([06e5f1f](https://github.com/davidramiro/cs2mqtt/commit/06e5f1f50db13d611fdf440406952a492fbc4f4e))
+* **homeassistant:** publish cs2mqtt as a bridge device; use it as via_device for game state devices ([98148ec](https://github.com/davidramiro/cs2mqtt/commit/98148ece21312f85226f4277593c47d34e1b338f))
+* **homeassistant:** use assembly version for mqtt device sw version ([9c64973](https://github.com/davidramiro/cs2mqtt/commit/9c64973a1b7a373e1d968dc1e2bab6547c122a9a))
+* **homeassistant:** use state_class: 'measurement' for numerical sensor values ([c3b1808](https://github.com/davidramiro/cs2mqtt/commit/c3b18082a5080891236f5e59106310cfe45e050f))
+* **logging:** add timestamps to log messages ([59b214a](https://github.com/davidramiro/cs2mqtt/commit/59b214a552eccd8186b91d25497a19251d925a47))
+* **logging:** log cs2 gsi api requests at debug level ([ad118ee](https://github.com/davidramiro/cs2mqtt/commit/ad118eedb5dfcc6b2d1c8152c8eb9df428d1afd9))
+* **mqtt:** add protocol version as an optional option ([85f2895](https://github.com/davidramiro/cs2mqtt/commit/85f28956e5b860b3bbf33d455edde13fdf2c13e4))
+* **mqtt:** publish offline message to all availability topics on graceful shutdown ([30db192](https://github.com/davidramiro/cs2mqtt/commit/30db19297262c29ef508a36187298950faa5b304))
+* upgrade to dotnet 9 ([219ff68](https://github.com/davidramiro/cs2mqtt/commit/219ff6890a0083745bf60a78980031ba8d6447c4))
+* **wip:** use hassio api to fetch mqtt info ([495b387](https://github.com/davidramiro/cs2mqtt/commit/495b387ba16c147392d8f9b3180a79a4baf7a582))
+
+
+### Upgrades
+
+* **deps:** update dependency mqttnet from v4 to v5 ([2953184](https://github.com/davidramiro/cs2mqtt/commit/29531841e2dc6aba0e1953749fedc4b9f930484b))
+* **deps:** update dependency mqttnet to 5.0.1.1416 ([56223ca](https://github.com/davidramiro/cs2mqtt/commit/56223ca45efb1493029cc0a1bff06e9d56a67045))
+* **deps:** update dependency polly to 8.5.1 ([55e1eb8](https://github.com/davidramiro/cs2mqtt/commit/55e1eb8b5a9ad27772dee7b04729d36c75400095))
+* **deps:** update dependency polly to 8.5.2 ([71f125c](https://github.com/davidramiro/cs2mqtt/commit/71f125c32e323f1e24e5db8877123a4f86b357a0))
+* **deps:** update dependency polly to 8.6.0 ([687880b](https://github.com/davidramiro/cs2mqtt/commit/687880b0ad2aa6628df2aa8c1a71711aa0d94612))
+* **deps:** update dependency polly to 8.6.2 ([81fbbd7](https://github.com/davidramiro/cs2mqtt/commit/81fbbd76090041a9fa76dfe1c009e6278491cfbf))
+* **deps:** update dependency polly to 8.6.3 ([262314a](https://github.com/davidramiro/cs2mqtt/commit/262314a3195d78c529b066dd1ec1a41f3fb6a429))
+* **deps:** update dotnet monorepo to 9.0.1 ([57b9794](https://github.com/davidramiro/cs2mqtt/commit/57b9794fad6c311774973c3197cf5f35fb7c478f))
+* **deps:** update dotnet monorepo to 9.0.3 ([7f32ef2](https://github.com/davidramiro/cs2mqtt/commit/7f32ef21f84553abd841b766193a41c6133e873a))
+* **deps:** update dotnet monorepo to 9.0.4 ([2105f4e](https://github.com/davidramiro/cs2mqtt/commit/2105f4e00ffb1fc7951702df68ea15a44311e9e9))
+* **deps:** update dotnet monorepo to 9.0.5 ([a86f4b3](https://github.com/davidramiro/cs2mqtt/commit/a86f4b3ac00760bac592efbb80b66abfb9e71373))
+* **deps:** update dotnet monorepo to 9.0.6 ([33975e4](https://github.com/davidramiro/cs2mqtt/commit/33975e48611ebb89176f64c1f609b996b751030b))
+* **deps:** update dotnet monorepo to 9.0.7 ([9e7ba36](https://github.com/davidramiro/cs2mqtt/commit/9e7ba363c2e87c90919f4914897ae8bb8dc0e460))
+* **deps:** update dotnet monorepo to 9.0.8 ([c949a9c](https://github.com/davidramiro/cs2mqtt/commit/c949a9cb53b09ac44fc42c3f2fc2048aeb3de4c7))
+* **deps:** update dotnet monorepo to 9.0.9 ([3033e9e](https://github.com/davidramiro/cs2mqtt/commit/3033e9e353f5418fe4699bc572bb013fc465de3a))
+* **deps:** update dotnet packages to 9.0.2 ([a74f2f4](https://github.com/davidramiro/cs2mqtt/commit/a74f2f455e690e6b40750e7319d4753efc4d173b))
+
+
+### Bug fixes
+
+* handle wrapped api response ([6d78d94](https://github.com/davidramiro/cs2mqtt/commit/6d78d941508afc051ff7f31038c17cf611e4256a))
+* **homeassistant:** fix bridge device being connected via unnamed device ([aeff30a](https://github.com/davidramiro/cs2mqtt/commit/aeff30a74f3298984c6d21a705be86f91b89b6e8))
+* **homeassistant:** show "inactive" for bomb when value is null instead of "unknown" ([7292ef1](https://github.com/davidramiro/cs2mqtt/commit/7292ef174bd7cc80cc5cf6befc1b39a819386e1e))
+* **homeassistant:** use `availability_mode: all` for mqtt entities ([32e8991](https://github.com/davidramiro/cs2mqtt/commit/32e8991b19d8d078e5e817bc8d62b4ea2139c8b8))
+* json identifier ([be8a246](https://github.com/davidramiro/cs2mqtt/commit/be8a246bf535c8065a54bbd26bcdcfbd31f18dac))
+* **mqtt:** correctly log connection retry delay when wait is over 1 minute ([1f30728](https://github.com/davidramiro/cs2mqtt/commit/1f307280ad909314af5c7283c4adea6999bcf309))
+* **mqtt:** ensure cs2mqtt shuts down after max reconnect attempts ([2d8c139](https://github.com/davidramiro/cs2mqtt/commit/2d8c139e86c60c717414eb5be68e2805641726d7))
+* **mqtt:** ensure no broker reconnect is attempted on graceful shutdown ([4e0def7](https://github.com/davidramiro/cs2mqtt/commit/4e0def7c567d46362f57c0cde5aa232ae80b8751))
+* **mqtt:** fix availability bug preventing sensor from transitioning offline -&gt; online ([e2a50c7](https://github.com/davidramiro/cs2mqtt/commit/e2a50c7237233c2a7b92ba81407a06091c288cf4))
+* **mqtt:** publish offline message to system availability topic on graceful shutdown ([5248c52](https://github.com/davidramiro/cs2mqtt/commit/5248c52c22ba30afdc6d3e711123e28075d6359a))
+* **mqtt:** throw exception when authentication fails ([d0177b6](https://github.com/davidramiro/cs2mqtt/commit/d0177b6600981a9ddafeced81a2f77aaefde114a))
+* possible case issue? ([5ff71f0](https://github.com/davidramiro/cs2mqtt/commit/5ff71f0a7068b05192651ead213088ca6df3e624))
+* pw, protocol and username not nullable ([95e6359](https://github.com/davidramiro/cs2mqtt/commit/95e63599006a78c8226f45d408b64edc84790429))
+* remove duplicate binding of gamestate options ([308821d](https://github.com/davidramiro/cs2mqtt/commit/308821d7c7473ecdc5ee369c8fdf24d4e3140044))
+* remove mocked endpoint ([09f6140](https://github.com/davidramiro/cs2mqtt/commit/09f6140b4d9e34ffee2723df929490c71c5e685f))
+* **wip:** pass string as endpoint is not an absolute uri ([75c3a40](https://github.com/davidramiro/cs2mqtt/commit/75c3a401d9f8b78f1a48ed50858aa58b29c24efd))
+* wrong ha endpoint url ([1bfc7b0](https://github.com/davidramiro/cs2mqtt/commit/1bfc7b04ecd71c4436728b0b23a5cd92f1005a78))
+
+
+### Performance improvements
+
+* in the documentation for `gamestate_integration_cs2mqtt.cfg`, it originally had `"heartbeat" "60.0"`, but it turns out this value also determines how long cs2 waits before sending player game state data when joining a deathmatch game or when switching from free cam to spectating a player in a casual game and more. the new recommended value is `"heartbeat" "5.0"`. please update your existing configs as you see fit. ([6deb9d7](https://github.com/davidramiro/cs2mqtt/commit/6deb9d7e56695e81e170855650d2b3ae3765e93d))
+
 ## [1.8.1](https://github.com/lupusbytes/cs2mqtt/compare/v1.8.0...v1.8.1) (2025-09-26)
 
 
